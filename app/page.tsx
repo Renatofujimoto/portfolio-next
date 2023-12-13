@@ -1,20 +1,14 @@
-import Image from "next/image";
-import Section from "./components/Initial/Section";
-import Navbar from "./components/Navbar/Navbar";
-import AchievementsSection from "./components/Project/AchievementsSection";
-import AboutSection from "./components/About/About";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
+import Footer from "../components/Footer/Footer";
+import Section from "../components/Initial/Section";
+import Navbar from "../components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#262630]">
-      <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
+      <div className="container mx-auto px-9">
         <Section />
-        <AchievementsSection />
-        <AboutSection />
-        <ProjectsSection />
       </div>
+      <Footer />
     </main>
   );
 }
