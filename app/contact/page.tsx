@@ -8,12 +8,12 @@ import { MdEmail } from "react-icons/md";
 const EmailSection: React.FC = () => {
   return (
     <>
-      <main className="flex min-h-screen flex-col bg-[#262630]">
+      <main className="flex min-h-screen flex-col bg-[#121212]">
         <div className="container mx-auto md:px-6">
           <div className="relative rounded-lg overflow-hidden bg-cover bg-no-repeat bg-[50%] bg-[url('/images/background.jpeg')] h-[500px]"></div>
           <div className="container mx-auto px-6 md:px-12 xl:px-32">
             <div className="text-center">
-              <div className="mt-[-240px] block rounded-lg bg-gray-500 px-6 py-1 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:py-16 md:px-12">
+              <div className="mt-[-110px] block rounded-lg bg-gray-500 px-6 py-1 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:py-16 md:px-12">
                 <h2 className=" text-5xl font-bold leading-tight tracking-tight text-[#fff]">
                   Entre em contato <br />
                   <span className="text-gray-400 dark:text-primary-400">
@@ -60,7 +60,6 @@ const EmailSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </main>
     </>
   );

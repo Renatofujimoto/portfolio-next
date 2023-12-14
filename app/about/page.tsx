@@ -93,7 +93,7 @@ const AboutSection: React.FC = () => {
 
   return (
     <>
-      <main className="flex lg:h-full flex-col pt-7 bg-[#262630]">
+      <main className="flex lg:h-full flex-col pt-7 bg-[#121212]">
         <section className="text-white">
           <div className="md:grid md:grid-cols-2 gap-4 items-center py-8 px-5 xl:gap-16 sm:py-16 xl:px-16">
             <Image
@@ -156,7 +156,7 @@ const AboutSection: React.FC = () => {
                 {TAB_DATA.find((t) => t.id === tab)?.content}
               </div>
             </div>
-            <div className="mt-4 md:mt-0 text-left flex flex-col h-[300px]">
+            <div className="mt-4 md:mt-0 text-left flex flex-col h-[500px]">
               <h2 className="text-4xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
                 Experiencias
               </h2>

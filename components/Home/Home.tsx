@@ -9,8 +9,8 @@ import Footer from "../Footer/Footer";
 const HomePage = () => {
   return (
     <>
-      <section className="mt-24 lg:h-[560px] lg:py-10 mx-5 flex  flex-col justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-12">
+      <section className="mt-36 lg:h-[560px] lg:py-10 mx-5 flex  flex-col justify-center">
+        <div className="grid grid-cols-1 lg:mb-20 sm:grid-cols-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -36,7 +36,7 @@ const HomePage = () => {
                 repeat={Infinity}
               />
             </h2>
-            <p className="text-[#ADB7BE] mb-4 text-base sm:text-lg lg:text-xl text-left">
+            <p className="text-[#ADB7BE] my-4 text-base sm:text-lg lg:text-xl text-left">
               Bem vindo, meu nome é Renato e sou Desenvolvedor FrontEnd, formado
               em Analise e Desenvolvimento de Sistemas, apaixonado por
               tecnologia, autodidata, proativo, fascinado em adquirir
@@ -47,13 +47,13 @@ const HomePage = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="col-span-4 place-self-center mt-4 lg:mt-0"
+            className="col-span-4 place-self-center my-4 lg:mt-0"
           >
             <div className="rounded-full bg-gray-700 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
               <Image
                 src="/images/hero-image.png"
                 alt="hero image"
-                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
                 width={400}
                 height={400}
                 priority={true}
@@ -62,7 +62,6 @@ const HomePage = () => {
           </motion.div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
