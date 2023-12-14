@@ -3,20 +3,13 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { FaReact } from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiReactquery,
-  SiTypescript,
-  SiTailwindcss,
-  SiJest,
-} from "react-icons/si";
+
 import Footer from "../Footer/Footer";
 
-const Section = () => {
+const HomePage = () => {
   return (
     <>
-      <section className="flex-grow lg:py-10 mx-5 flex flex-col justify-center">
+      <section className="mt-24 lg:h-[560px] lg:py-10 mx-5 flex  flex-col justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -56,7 +49,7 @@ const Section = () => {
             transition={{ duration: 0.5 }}
             className="col-span-4 place-self-center mt-4 lg:mt-0"
           >
-            <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+            <div className="rounded-full bg-gray-700 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
               <Image
                 src="/images/hero-image.png"
                 alt="hero image"
@@ -68,18 +61,10 @@ const Section = () => {
             </div>
           </motion.div>
         </div>
-        <div className="flex justify-center mt-10 gap-4">
-          <FaReact className=" text-blue-400 h-10 w-10 inline-block" />
-          <SiNextdotjs className=" text-white h-10 w-10 inline-block " />
-          <SiReactquery className=" text-red-600 h-10 w-10 inline-block" />
-          <SiTypescript className=" text-blue-600 h-10 w-10 inline-block" />
-          <SiTailwindcss className=" text-blue-600 h-10 w-10 inline-block" />
-          <SiJest className=" text-red-600 h-10 w-10 inline-block" />
-        </div>
       </section>
       <Footer />
     </>
   );
 };
 
-export default Section;
+export default HomePage;

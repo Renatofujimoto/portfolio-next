@@ -5,6 +5,14 @@ import Image from "next/image";
 import TabButton from "../../components/About/TabButton";
 import Footer from "../../components/Footer/Footer";
 import DownloadButton from "@/components/Home/DownloadButton";
+import { FaReact } from "react-icons/fa";
+import {
+  SiJest,
+  SiNextdotjs,
+  SiReactquery,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 interface TabData {
   title: string;
@@ -92,12 +100,13 @@ const AboutSection: React.FC = () => {
               src="/images/perfil2.jpg"
               width={500}
               height={500}
-              alt={""}
+              alt={"imagem de perfil"}
+              priority={true}
               className="rounded-full shadow-2xl"
             />
             <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
               <h2 className="text-4xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
-                About Me
+                Sobre Mim
               </h2>
               <p className="text-base text-justify lg:text-lg">
                 Sou um desenvolvedor FrontEnd apaixonado por criar aplicações
@@ -115,10 +124,19 @@ const AboutSection: React.FC = () => {
                 multidisciplinares, o que me permite contribuir de forma
                 abrangente em projetos complexos.
               </p>
-              <div className="px-1 inline-block py-1 mt-5 w-full sm:w-fit rounded-full bg-gradient-to-br from-gray-400 to-gray-600 hover:bg-slate-800 text-white mt-3">
-                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+
+              <div className="px-1 inline-block py-1  w-full sm:w-fit rounded-full bg-gradient-to-br from-gray-400 to-gray-600 hover:bg-slate-800 text-white mt-5">
+                <span className="block text-center bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                   <DownloadButton />
                 </span>
+              </div>
+              <div className="flex justify-center my-6 gap-4">
+                <FaReact className=" text-blue-400 h-10 w-10 inline-block" />
+                <SiNextdotjs className=" text-white h-10 w-10 inline-block " />
+                <SiReactquery className=" text-red-600 h-10 w-10 inline-block" />
+                <SiTypescript className=" text-blue-600 h-10 w-10 inline-block" />
+                <SiTailwindcss className=" text-blue-600 h-10 w-10 inline-block" />
+                <SiJest className=" text-red-600 h-10 w-10 inline-block" />
               </div>
               <div className="flex flex-col sm:flex-row justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
                 <TabButton
@@ -138,8 +156,7 @@ const AboutSection: React.FC = () => {
                 {TAB_DATA.find((t) => t.id === tab)?.content}
               </div>
             </div>
-
-            <div className="mt-4 md:mt-0 text-left flex flex-col h-[350px]">
+            <div className="mt-4 md:mt-0 text-left flex flex-col h-[300px]">
               <h2 className="text-4xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
                 Experiencias
               </h2>
@@ -164,7 +181,6 @@ const AboutSection: React.FC = () => {
             </div>
           </div>
         </section>
-        <Footer />;
       </main>
     </>
   );

@@ -42,7 +42,7 @@ const projectsData = [
     description:
       "Um e-commerce ficticio usando uma api fake para listar produtos. Utilizando NextJS, styled-components, React query e axios",
     image: "/images/projects/capputeno.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Web"],
     gitUrl: "https://github.com/Renatofujimoto/e-commerce-capputeeno",
     previewUrl: "/",
   },
@@ -55,6 +55,26 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Renatofujimoto/habits-diary",
     previewUrl: "https://habits-diary.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "Randow Password",
+    description:
+      "Um app de gerar senha aleatoria. Utilizando React Native, expo-cli",
+    image: "/images/projects/password.jpg",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/Renatofujimoto/random-password",
+    previewUrl: "https://github.com/Renatofujimoto/random-password",
+  },
+  {
+    id: 7,
+    title: "Recipe App",
+    description:
+      "Um app de receitas utilizando React Native. Utilizando React Native, expo-cli",
+    image: "/images/projects/recipe.jpg",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/Renatofujimoto/recipe-app",
+    previewUrl: "https://github.com/Renatofujimoto/recipe-app",
   },
 ];
 

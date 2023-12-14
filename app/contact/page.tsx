@@ -1,127 +1,65 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import Link from "next/link";
-import Image from "next/image";
 import Footer from "../../components/Footer/Footer";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiArrowRightCircle } from "react-icons/fi";
+import { MdEmail } from "react-icons/md";
 
 const EmailSection: React.FC = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState<boolean>(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const data = {
-      email: (e.target as any).email.value,
-      subject: (e.target as any).subject.value,
-      message: (e.target as any).message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
-
-    const options: RequestInit = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
-    }
-  };
-
   return (
     <>
-      <main className="flex h-full flex-col bg-[#262630]">
-        <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
-          <div className="z-10">
-            <h5 className="text-xl font-bold text-white my-2">
-              Let&apos;s Connect
-            </h5>
-            <p className="text-[#ADB7BE] mb-4 max-w-md">
-              {" "}
-              I&apos;m currently looking for new opportunities, my inbox is
-              always open. Whether you have a question or just want to say hi,
-              I&apos;ll try my best to get back to you!
-            </p>
-            <div className="socials flex flex-row gap-2">
-              <Link href="github.com">
-                {/* <Image src={GithubIcon} alt="Github Icon" /> */}
-              </Link>
-              <Link href="linkedin.com">
-                {/* <Image src={LinkedinIcon} alt="Linkedin Icon" /> */}
-              </Link>
+      <main className="flex min-h-screen flex-col bg-[#262630]">
+        <div className="container mx-auto md:px-6">
+          <div className="relative rounded-lg overflow-hidden bg-cover bg-no-repeat bg-[50%] bg-[url('/images/background.jpeg')] h-[500px]"></div>
+          <div className="container mx-auto px-6 md:px-12 xl:px-32">
+            <div className="text-center">
+              <div className="mt-[-240px] block rounded-lg bg-gray-500 px-6 py-1 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:py-16 md:px-12">
+                <h2 className=" text-5xl font-bold leading-tight tracking-tight text-[#fff]">
+                  Entre em contato <br />
+                  <span className="text-gray-400 dark:text-primary-400">
+                    pelas redes sociais
+                  </span>
+                </h2>
+              </div>
+              <section className="flex flex-wrap justify-center gap-4 mt-8">
+                <button
+                  onClick={() => {
+                    window.location.href = "https://github.com/Renatofujimoto";
+                  }}
+                  type="button"
+                  className="mb-2 flex items-center rounded bg-[#696969] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                >
+                  <FaGithub className="h-5 w-5 mr-2" />
+                  Github
+                  <FiArrowRightCircle className="h-5 w-5 ml-2" />
+                </button>
+                <button
+                  onClick={() => {
+                    window.location.href =
+                      "https://www.linkedin.com/in/renato-fujimoto-1321b71b0/";
+                  }}
+                  type="button"
+                  className="mb-2 flex items-center rounded bg-[#0a66c2] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                >
+                  <FaLinkedin className="h-6 w-6 mr-2" />
+                  linkedin
+                  <FiArrowRightCircle className="h-5 w-5 ml-2" />
+                </button>
+                <button
+                  onClick={() => {
+                    window.location.href = "mailto:renatofujimoto2@gmail.com";
+                  }}
+                  type="button"
+                  className="mb-2 flex items-center rounded bg-red-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                >
+                  <MdEmail className="h-6 w-6 mr-2" />
+                  Email
+                  <FiArrowRightCircle className="h-5 w-5 ml-2" />
+                </button>
+              </section>
             </div>
           </div>
-          <div>
-            {emailSubmitted ? (
-              <p className="text-green-500 text-sm mt-2">
-                Email sent successfully!
-              </p>
-            ) : (
-              <form className="flex flex-col" onSubmit={handleSubmit}>
-                <div className="mb-6">
-                  <label
-                    htmlFor="email"
-                    className="text-white block mb-2 text-sm font-medium"
-                  >
-                    Your email
-                  </label>
-                  <input
-                    name="email"
-                    type="email"
-                    id="email"
-                    required
-                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="jacob@google.com"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="subject"
-                    className="text-white block text-sm mb-2 font-medium"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    name="subject"
-                    type="text"
-                    id="subject"
-                    required
-                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="Just saying hi"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="message"
-                    className="text-white block text-sm mb-2 font-medium"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="Let's talk about..."
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-gray-500 hover:bg-gray-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-                >
-                  Send Message
-                </button>
-              </form>
-            )}
-          </div>
-        </section>
+        </div>
         <Footer />
       </main>
     </>

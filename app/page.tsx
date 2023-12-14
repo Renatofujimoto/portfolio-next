@@ -1,11 +1,9 @@
-import Footer from "../components/Footer/Footer";
-import Section from "../components/Home/Section";
-import Navbar from "../components/Navbar/Navbar";
+import HomePage from "@/components/Home/Home";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#262630]">
-      <Section />
+    <main className="flex flex-col bg-[#262630]">
+      <HomePage />
     </main>
   );
 }

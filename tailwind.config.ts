@@ -8,13 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        josefin: ["Josefin Sans", "sans-serif"],
-        roboto_mono: ["Roboto Mono", "monospace"],
-      },
-      colors: {
-        primary: "#262630",
-        secondary: "#363636",
+      backgroundImage: {
+        background: "url('/background.png')",
       },
     },
   },
