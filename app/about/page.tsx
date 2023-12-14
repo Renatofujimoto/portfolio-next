@@ -4,6 +4,7 @@ import { useTransition } from "react";
 import Image from "next/image";
 import TabButton from "../../components/About/TabButton";
 import Footer from "../../components/Footer/Footer";
+import DownloadButton from "@/components/Home/DownloadButton";
 
 interface TabData {
   title: string;
@@ -86,7 +87,7 @@ const AboutSection: React.FC = () => {
     <>
       <main className="flex lg:h-full flex-col pt-7 bg-[#262630]">
         <section className="text-white">
-          <div className="md:grid md:grid-cols-2 gap-4 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+          <div className="md:grid md:grid-cols-2 gap-4 items-center py-8 px-5 xl:gap-16 sm:py-16 xl:px-16">
             <Image
               src="/images/perfil2.jpg"
               width={500}
@@ -114,6 +115,11 @@ const AboutSection: React.FC = () => {
                 multidisciplinares, o que me permite contribuir de forma
                 abrangente em projetos complexos.
               </p>
+              <div className="px-1 inline-block py-1 mt-5 w-full sm:w-fit rounded-full bg-gradient-to-br from-gray-400 to-gray-600 hover:bg-slate-800 text-white mt-3">
+                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                  <DownloadButton />
+                </span>
+              </div>
               <div className="flex flex-col sm:flex-row justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
                 <TabButton
                   selectTab={() => handleTabChange("skills")}
@@ -133,7 +139,7 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-4 md:mt-0 text-left flex flex-col h-[400px]">
+            <div className="mt-4 md:mt-0 text-left flex flex-col h-[350px]">
               <h2 className="text-4xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
                 Experiencias
               </h2>

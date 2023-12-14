@@ -3,13 +3,20 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import DownloadButton from "./DownloadButton";
+import { FaReact } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiReactquery,
+  SiTypescript,
+  SiTailwindcss,
+  SiJest,
+} from "react-icons/si";
 import Footer from "../Footer/Footer";
+
 const Section = () => {
   return (
     <>
-      <section className="flex-grow lg:py-16 mx-5 flex flex-col justify-center">
+      <section className="flex-grow lg:py-10 mx-5 flex flex-col justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -17,16 +24,16 @@ const Section = () => {
             transition={{ duration: 0.5 }}
             className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
           >
-            <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+            <h2 className="text-white mb-4 text-3xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
                 Olá, Eu sou
               </span>
               <br></br>
               <TypeAnimation
                 sequence={[
-                  "Renato",
+                  "Web Developer",
                   2000,
-                  "Frontend",
+                  "Front Developer",
                   2000,
                   "Mobile Developer",
                   2000,
@@ -35,18 +42,13 @@ const Section = () => {
                 speed={50}
                 repeat={Infinity}
               />
-            </h1>
-            <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+            </h2>
+            <p className="text-[#ADB7BE] mb-4 text-base sm:text-lg lg:text-xl text-left">
               Bem vindo, meu nome é Renato e sou Desenvolvedor FrontEnd, formado
               em Analise e Desenvolvimento de Sistemas, apaixonado por
               tecnologia, autodidata, proativo, fascinado em adquirir
               conhecimento.
             </p>
-            <div className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-gray-400 to-gray-600 hover:bg-slate-800 text-white mt-3">
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                <DownloadButton />
-              </span>
-            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -66,7 +68,16 @@ const Section = () => {
             </div>
           </motion.div>
         </div>
+        <div className="flex justify-center mt-10 gap-4">
+          <FaReact className=" text-blue-400 h-10 w-10 inline-block" />
+          <SiNextdotjs className=" text-white h-10 w-10 inline-block " />
+          <SiReactquery className=" text-red-600 h-10 w-10 inline-block" />
+          <SiTypescript className=" text-blue-600 h-10 w-10 inline-block" />
+          <SiTailwindcss className=" text-blue-600 h-10 w-10 inline-block" />
+          <SiJest className=" text-red-600 h-10 w-10 inline-block" />
+        </div>
       </section>
+      <Footer />
     </>
   );
 };

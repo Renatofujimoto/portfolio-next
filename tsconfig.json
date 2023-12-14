@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Initial/DownloadButton.tsx",
+    "components/Home/DownloadButton.tsx",
     "components/ProjectsSection/AchievementsSection.tsx",
     "app/about/page.tsx"
   ],
