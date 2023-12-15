@@ -83,6 +83,7 @@ const TAB_DATA2: TabData[] = [
 
 const AboutSection: React.FC = () => {
   const [tab, setTab] = useState<string>("skills");
+  const [tab2, setTab2] = useState<string>("design");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id: string) => {
@@ -176,7 +177,7 @@ const AboutSection: React.FC = () => {
                 </TabButton>
               </div>
               <div className="mt-8">
-                {TAB_DATA2.find((t) => t.id === tab)?.content}
+                {TAB_DATA2.find((t) => t.id === tab2)?.content}
               </div>
             </div>
           </div>
