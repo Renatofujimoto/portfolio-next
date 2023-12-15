@@ -98,7 +98,7 @@ const ProjectsSection = () => {
 
   return (
     <>
-      <main className="flex h-full flex-col bg-[#262630]">
+      <main className="flex h-full flex-col bg-[#121212]">
         <section>
           <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
             My Projects

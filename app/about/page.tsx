@@ -177,7 +177,7 @@ const AboutSection: React.FC = () => {
                 </TabButton>
               </div>
               <div className="mt-8">
-                {TAB_DATA2.find((t) => t.id === tab2)?.content}
+                {TAB_DATA2.find((t) => t.id === tab)?.content}
               </div>
             </div>
           </div>
