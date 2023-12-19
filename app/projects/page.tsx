@@ -33,7 +33,7 @@ const projectsData = [
       "Um jogo de perguntas e respostas sobre programação. Utilizando React",
     image: "/images/projects/Quiz.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/Renatofujimoto/Quiz",
+    gitUrl: "https://github.com/Renatofujimoto/quiz",
     previewUrl: "https://quiz-seven-pi.vercel.app/",
   },
   {

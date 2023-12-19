@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const HomePage = () => {
   return (
     <>
-      <section className="lg:mt-36 sm:mt-14 lg:h-[560px] lg:py-10 mx-5 flex  flex-col justify-center">
+      <section className="lg:mt-36 sm:mt-14 lg:h-[560px] lg:py-10 mx-8 flex  flex-col justify-center">
         <div className="grid grid-cols-1 mt-20 mb-20 lg:mb-20 sm:grid-cols-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
