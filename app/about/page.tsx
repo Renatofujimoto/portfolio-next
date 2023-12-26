@@ -13,6 +13,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import Skills from "@/components/BannerSkills/skillsBanner";
 
 interface TabData {
   title: string;
@@ -26,7 +27,7 @@ const TAB_DATA: TabData[] = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>JavaScript</li>
+        <li>TypeScript</li>
         <li>React</li>
         <li>Next Js</li>
         <li>Jest/Testing Library</li>
@@ -98,7 +99,7 @@ const AboutSection: React.FC = () => {
         <section className="text-white">
           <div className="md:grid md:grid-cols-2 gap-4 items-center py-8 px-5 xl:gap-16 sm:py-16 xl:px-16">
             <Image
-              src="/images/perfil2.jpg"
+              src="/images/mario.gif"
               width={500}
               height={500}
               alt={"imagem de perfil"}
@@ -132,12 +133,7 @@ const AboutSection: React.FC = () => {
                 </span>
               </div>
               <div className="flex justify-center my-6 gap-4">
-                <FaReact className=" text-blue-400 h-10 w-10 inline-block" />
-                <SiNextdotjs className=" text-white h-10 w-10 inline-block " />
-                <SiReactquery className=" text-red-600 h-10 w-10 inline-block" />
-                <SiTypescript className=" text-blue-600 h-10 w-10 inline-block" />
-                <SiTailwindcss className=" text-blue-600 h-10 w-10 inline-block" />
-                <SiJest className=" text-red-600 h-10 w-10 inline-block" />
+                <Skills />
               </div>
               <div className="flex flex-col sm:flex-row justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
                 <TabButton
@@ -159,7 +155,7 @@ const AboutSection: React.FC = () => {
             </div>
             <div className="mt-4 md:mt-0 text-left flex flex-col h-[500px]">
               <h2 className="text-4xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
-                Experiencias
+                Experiências
               </h2>
 
               <div className="flex flex-col sm:flex-row justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4 ">
@@ -173,7 +169,7 @@ const AboutSection: React.FC = () => {
                   selectTab={() => handleTabChange("empresas")}
                   active={tab === "empresas"}
                 >
-                  We labore
+                  We laborate
                 </TabButton>
               </div>
               <div className="mt-8">
