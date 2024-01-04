@@ -17,7 +17,7 @@ const HomePage = () => {
           >
             <h2 className="text-white my-4 text-3xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-600">
-                Olá, Eu sou
+                Olá, Eu souu
               </span>
               <br></br>
               <TypeAnimation
