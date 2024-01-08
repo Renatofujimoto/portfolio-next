@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer/Footer";
 import HomePage from "@/components/Home/Home";
 
 export default function Home() {
